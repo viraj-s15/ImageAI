@@ -868,7 +868,7 @@ class VideoObjectDetection:
                             output_video.write(detected_copy)
 
                             # Break the loop on 'q' key press
-                            if cv2.waitKey(1) & 0xFF == ord("q"):
+                            if cv2.waitKey(3) & 0xFF == ord("q"):
                                 break
 
                         if counting == 1 or check_frame_interval == 0:
