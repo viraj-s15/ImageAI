@@ -808,7 +808,7 @@ class VideoObjectDetection:
                 video_frames_count = 0
 
                 frame_rate_divider = 3
-                frame_size = (600, 800)
+                frame_size = (300, 300)
                 while input_video.isOpened():
                     ret, frame = input_video.read()
 
