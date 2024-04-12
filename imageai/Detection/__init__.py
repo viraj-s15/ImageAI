@@ -864,9 +864,9 @@ class VideoObjectDetection:
 
                         output_frames_count_dict[counting] = output_objects_count
 
+                        cv2.imshow("Frame", detected_copy)
                         if save_detected_video == True:
                             output_video.write(detected_copy)
-                            cv2.imshow("Frame", detected_copy)
 
                             # Break the loop on 'q' key press
                             if cv2.waitKey(1) & 0xFF == ord("q"):
