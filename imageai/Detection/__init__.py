@@ -849,7 +849,7 @@ class VideoObjectDetection:
                                 )
                             except:
                                 None
-
+                        cv2.imshow('Frame', detected_copy)
                         output_frames_dict[counting] = output_objects_array
 
                         output_objects_count = {}
@@ -864,7 +864,6 @@ class VideoObjectDetection:
 
                         output_frames_count_dict[counting] = output_objects_count
 
-                        cv2.imshow("Frame", detected_copy)
                         if save_detected_video == True:
                             output_video.write(detected_copy)
 
