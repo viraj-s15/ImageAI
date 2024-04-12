@@ -808,11 +808,13 @@ class VideoObjectDetection:
                 video_frames_count = 0
 
                 frame_rate_divider = 3
+                frame_size = (600, 800)
                 while input_video.isOpened():
                     ret, frame = input_video.read()
 
                     if ret == True:
                         video_frames_count += 1
+                        cv2.resize(frame, frame_size)
                         if detection_timeout != None:
                             if (video_frames_count % frames_per_second) == 0:
                                 detection_timeout_count += 1
